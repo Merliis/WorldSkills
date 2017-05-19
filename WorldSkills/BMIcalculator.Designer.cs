@@ -58,6 +58,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BMIresult = new System.Windows.Forms.Label();
             this.arrowBox = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.arrow = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,7 +66,6 @@
             this.male = new System.Windows.Forms.Button();
             this.headerBlock = new System.Windows.Forms.PictureBox();
             this.footerBlock = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.remainTime.SuspendLayout();
             this.arrowBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
@@ -400,6 +400,14 @@
             this.arrowBox.Size = new System.Drawing.Size(54, 87);
             this.arrowBox.TabIndex = 51;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.BackColor = System.Drawing.Color.White;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // arrow
             // 
             this.arrow.Image = ((System.Drawing.Image)(resources.GetObject("arrow.Image")));
@@ -479,14 +487,6 @@
             this.footerBlock.Size = new System.Drawing.Size(786, 39);
             this.footerBlock.TabIndex = 29;
             this.footerBlock.TabStop = false;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.BackColor = System.Drawing.Color.White;
-            this.toolTip1.InitialDelay = 500;
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ReshowDelay = 100;
             // 
             // BMIcalculator
             // 

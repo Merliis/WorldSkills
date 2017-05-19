@@ -148,7 +148,7 @@ namespace WorldSkills
 
         private void calc_Click(object sender, EventArgs e)
         {
-            if (height.Text == "" || weight.Text == "" || female.FlatAppearance.BorderSize != 3 && male.FlatAppearance.BorderSize != 3)
+            if (height.Text == "" || weight.Text == "" || height.Text == "0" || weight.Text == "0" || female.FlatAppearance.BorderSize != 3 && male.FlatAppearance.BorderSize != 3)
             {
                 MessageBox.Show("Параметры пол, рост или вес не введены!", "Параметры не введены", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -190,7 +190,10 @@ namespace WorldSkills
                 if (BMIresult.Text.Length <= 2) {
                     BMIresult.Text += ",0";
                 }
-            }
+            } //easter
+             /*if (height.Text == "14" && weight.Text == "88" && male.FlatAppearance.BorderSize == 3) {
+                this.pictureBox1.Image = global::WorldSkills.Properties.Resources.easter;
+             }*/
         }
 
         private void BMIcalculator_KeyDown(object sender, KeyEventArgs e)

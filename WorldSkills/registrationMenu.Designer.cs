@@ -67,20 +67,20 @@
             this.registration = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQLDataSet = new WorldSkills.SQLDataSet();
             this.countryComboBox = new System.Windows.Forms.ComboBox();
             this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sQLDataSet = new WorldSkills.SQLDataSet();
             this.countryTableAdapter = new WorldSkills.SQLDataSetTableAdapters.CountryTableAdapter();
             this.warn = new System.Windows.Forms.Label();
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genderTableAdapter = new WorldSkills.SQLDataSetTableAdapters.GenderTableAdapter();
             this.remainTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.footerBlock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQLDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // backToMainMenu
@@ -331,6 +331,7 @@
             this.emailTextBox.Size = new System.Drawing.Size(246, 26);
             this.emailTextBox.TabIndex = 39;
             this.emailTextBox.Text = "Email";
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
@@ -344,6 +345,8 @@
             this.passwordTextBox.Size = new System.Drawing.Size(202, 26);
             this.passwordTextBox.TabIndex = 40;
             this.passwordTextBox.Text = "Пароль";
+            this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
+            this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
             // 
             // retryPasswordTextBox
             // 
@@ -355,6 +358,8 @@
             this.retryPasswordTextBox.Size = new System.Drawing.Size(202, 26);
             this.retryPasswordTextBox.TabIndex = 41;
             this.retryPasswordTextBox.Text = "Повторите пароль";
+            this.retryPasswordTextBox.Enter += new System.EventHandler(this.retryPasswordTextBox_Enter);
+            this.retryPasswordTextBox.Leave += new System.EventHandler(this.retryPasswordTextBox_Leave);
             // 
             // nameTextBox
             // 
@@ -366,6 +371,8 @@
             this.nameTextBox.Size = new System.Drawing.Size(202, 26);
             this.nameTextBox.TabIndex = 42;
             this.nameTextBox.Text = "Имя";
+            this.nameTextBox.Enter += new System.EventHandler(this.nameTextBox_Enter);
+            this.nameTextBox.Leave += new System.EventHandler(this.nameTextBox_Leave);
             // 
             // secNameTextBox
             // 
@@ -377,6 +384,8 @@
             this.secNameTextBox.Size = new System.Drawing.Size(202, 26);
             this.secNameTextBox.TabIndex = 43;
             this.secNameTextBox.Text = "Фамилия";
+            this.secNameTextBox.Enter += new System.EventHandler(this.secNameTextBox_Enter);
+            this.secNameTextBox.Leave += new System.EventHandler(this.secNameTextBox_Leave);
             // 
             // avatarPicBox
             // 
@@ -415,7 +424,7 @@
             this.avatarImageLinkTextBox.Name = "avatarImageLinkTextBox";
             this.avatarImageLinkTextBox.Size = new System.Drawing.Size(169, 26);
             this.avatarImageLinkTextBox.TabIndex = 45;
-            this.avatarImageLinkTextBox.Text = "Photo_file.jpg";
+            this.avatarImageLinkTextBox.Text = "shakal.jypeg";
             // 
             // label1
             // 
@@ -495,6 +504,7 @@
             this.genderComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.genderComboBox.DataSource = this.genderBindingSource;
             this.genderComboBox.DisplayMember = "Gender";
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.genderComboBox.FormattingEnabled = true;
             this.genderComboBox.Location = new System.Drawing.Point(179, 405);
@@ -502,12 +512,23 @@
             this.genderComboBox.Size = new System.Drawing.Size(128, 28);
             this.genderComboBox.TabIndex = 53;
             // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.sQLDataSet;
+            // 
+            // sQLDataSet
+            // 
+            this.sQLDataSet.DataSetName = "SQLDataSet";
+            this.sQLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // countryComboBox
             // 
             this.countryComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.countryComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.countryComboBox.DataSource = this.countryBindingSource;
             this.countryComboBox.DisplayMember = "CountryName";
+            this.countryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.countryComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.countryComboBox.FormattingEnabled = true;
             this.countryComboBox.Location = new System.Drawing.Point(588, 405);
@@ -520,11 +541,6 @@
             this.countryBindingSource.DataMember = "Country";
             this.countryBindingSource.DataSource = this.sQLDataSet;
             // 
-            // sQLDataSet
-            // 
-            this.sQLDataSet.DataSetName = "SQLDataSet";
-            this.sQLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // countryTableAdapter
             // 
             this.countryTableAdapter.ClearBeforeFill = true;
@@ -533,17 +549,12 @@
             // 
             this.warn.AutoSize = true;
             this.warn.ForeColor = System.Drawing.Color.Red;
-            this.warn.Location = new System.Drawing.Point(517, 436);
+            this.warn.Location = new System.Drawing.Point(226, 166);
             this.warn.Name = "warn";
-            this.warn.Size = new System.Drawing.Size(247, 13);
+            this.warn.Size = new System.Drawing.Size(152, 13);
             this.warn.TabIndex = 55;
-            this.warn.Text = "Введёная страна не соответсвует базе данных";
+            this.warn.Text = "Этот email уже используется";
             this.warn.Visible = false;
-            // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.sQLDataSet;
             // 
             // genderTableAdapter
             // 
@@ -597,9 +608,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.footerBlock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQLDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

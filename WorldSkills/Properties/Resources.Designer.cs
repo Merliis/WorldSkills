@@ -123,6 +123,16 @@ namespace WorldSkills.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap easter {
+            get {
+                object obj = ResourceManager.GetObject("easter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ibirapuera_park_lake {
             get {
                 object obj = ResourceManager.GetObject("ibirapuera-park-lake", resourceCulture);

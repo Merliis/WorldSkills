@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace WorldSkills
 {
@@ -129,12 +130,18 @@ namespace WorldSkills
 
         private void emailTextBox_Enter(object sender, EventArgs e)
         {
-
+            if (emailTextBox.Text == "Email") {
+                emailTextBox.Text = "";
+                emailTextBox.ForeColor = Color.Black;
+            }
         }
 
         private void emailTextBox_Leave(object sender, EventArgs e)
         {
-
+            if (emailTextBox.Text == "") {
+                emailTextBox.Text = "Email";
+                emailTextBox.ForeColor = Color.FromArgb(180, 180, 180);
+            }
         }
 
         private void findPictureButton_Click(object sender, EventArgs e)
@@ -152,26 +159,106 @@ namespace WorldSkills
         }
 
         private void registration_Click(object sender, EventArgs e)
-        {
+        {           
             SqlConnection con = new SqlConnection(@"Data Source=PROVICE-PC\SQLEXPRESS;Initial Catalog=SQL;Integrated Security=True");
-            SqlCommand com = new SqlCommand("SELECT * FROM [dbo].[Country]", con);
+            SqlCommand comUser = new SqlCommand("SELECT * FROM [dbo].[User]", con);
             SqlDataReader reader;
 
             con.Open();
-            reader = com.ExecuteReader();
+            reader = comUser.ExecuteReader();
 
             bool result = false;
             while (reader.Read())
 
             {
-                if (countryComboBox.Text == reader["CountryName"].ToString()) {
+                if (emailTextBox.Text == reader["Email"].ToString()) {
                     result = true;
-                    warn.Visible = false;
+                } else {
+                    result = false;
                 }
             }
-            if (result == false) {
-                warn.Visible = true;
+            if (result == true) {
+                Console.WriteLine("true");
             }
+
+            if (passwordTextBox.Text != retryPasswordTextBox.Text) {
+                MessageBox.Show("Пароли не совпадают", "Ошибка регистрации", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else {
+                string finalPasswordVar = passwordTextBox.Text;
+            }
+        }
+
+        private void passwordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (passwordTextBox.Text == "Пароль") {
+                passwordTextBox.Text = "";
+                passwordTextBox.ForeColor = Color.Black;
+                passwordTextBox.PasswordChar = '*';
+            }
+        }
+
+        private void passwordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (passwordTextBox.Text == "") {
+                passwordTextBox.Text = "Пароль";
+                passwordTextBox.ForeColor = Color.FromArgb(180, 180, 180);
+                passwordTextBox.PasswordChar = '\0';
+            }
+        }
+
+        private void retryPasswordTextBox_Enter(object sender, EventArgs e)
+        {
+            if (retryPasswordTextBox.Text == "Повторите пароль") {
+                retryPasswordTextBox.Text = "";
+                retryPasswordTextBox.ForeColor = Color.Black;
+                retryPasswordTextBox.PasswordChar = '*';
+            }
+        }
+
+        private void retryPasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if (retryPasswordTextBox.Text == "") {
+                retryPasswordTextBox.Text = "Повторите пароль";
+                retryPasswordTextBox.ForeColor = Color.FromArgb(180, 180, 180);
+                retryPasswordTextBox.PasswordChar = '\0';
+            }
+        }
+
+        private void nameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (nameTextBox.Text == "Имя") {
+                nameTextBox.Text = "";
+                nameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void nameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (nameTextBox.Text == "") {
+                nameTextBox.Text = "Имя";
+                nameTextBox.ForeColor = Color.FromArgb(180, 180, 180);
+            }
+        }
+
+        private void secNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (secNameTextBox.Text == "Фамилия") {
+                secNameTextBox.Text = "";
+                secNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void secNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (secNameTextBox.Text == "") {
+                secNameTextBox.Text = "Фамилия";
+                secNameTextBox.ForeColor = Color.FromArgb(180, 180, 180);
+            }
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
