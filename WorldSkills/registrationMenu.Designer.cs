@@ -74,6 +74,7 @@
             this.countryTableAdapter = new WorldSkills.SQLDataSetTableAdapters.CountryTableAdapter();
             this.warn = new System.Windows.Forms.Label();
             this.genderTableAdapter = new WorldSkills.SQLDataSetTableAdapters.GenderTableAdapter();
+            this.passWarn = new System.Windows.Forms.Label();
             this.remainTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
@@ -331,6 +332,7 @@
             this.emailTextBox.Size = new System.Drawing.Size(246, 26);
             this.emailTextBox.TabIndex = 39;
             this.emailTextBox.Text = "Email";
+            this.emailTextBox.Click += new System.EventHandler(this.emailTextBox_Click);
             this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
             this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
@@ -549,7 +551,7 @@
             // 
             this.warn.AutoSize = true;
             this.warn.ForeColor = System.Drawing.Color.Red;
-            this.warn.Location = new System.Drawing.Point(226, 166);
+            this.warn.Location = new System.Drawing.Point(226, 167);
             this.warn.Name = "warn";
             this.warn.Size = new System.Drawing.Size(152, 13);
             this.warn.TabIndex = 55;
@@ -560,12 +562,24 @@
             // 
             this.genderTableAdapter.ClearBeforeFill = true;
             // 
+            // passWarn
+            // 
+            this.passWarn.AutoSize = true;
+            this.passWarn.ForeColor = System.Drawing.Color.Red;
+            this.passWarn.Location = new System.Drawing.Point(210, 253);
+            this.passWarn.Name = "passWarn";
+            this.passWarn.Size = new System.Drawing.Size(118, 13);
+            this.passWarn.TabIndex = 56;
+            this.passWarn.Text = "Пароли не совпадают";
+            this.passWarn.Visible = false;
+            // 
             // registrationMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.passWarn);
             this.Controls.Add(this.warn);
             this.Controls.Add(this.countryComboBox);
             this.Controls.Add(this.genderComboBox);
@@ -662,5 +676,6 @@
         private System.Windows.Forms.Label warn;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private SQLDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private System.Windows.Forms.Label passWarn;
     }
 }

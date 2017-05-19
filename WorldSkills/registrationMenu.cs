@@ -2,11 +2,14 @@
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace WorldSkills
 {
     public partial class registrationMenu : Form
     {
+
+
         public registrationMenu()
         {
             InitializeComponent();
@@ -159,30 +162,23 @@ namespace WorldSkills
         }
 
         private void registration_Click(object sender, EventArgs e)
-        {           
+        {
+
             SqlConnection con = new SqlConnection(@"Data Source=PROVICE-PC\SQLEXPRESS;Initial Catalog=SQL;Integrated Security=True");
-            SqlCommand comUser = new SqlCommand("SELECT * FROM [dbo].[User]", con);
+            SqlCommand com = new SqlCommand("SELECT * FROM [dbo].[User]", con);
             SqlDataReader reader;
 
             con.Open();
-            reader = comUser.ExecuteReader();
+            reader = com.ExecuteReader();
 
-            bool result = false;
-            while (reader.Read())
-
-            {
-                if (emailTextBox.Text == reader["Email"].ToString()) {
-                    result = true;
-                } else {
-                    result = false;
+            while (reader.Read()) {
+                if (emailTextBox.Text == reader["Email"].ToString())
+                {
+                    warn.Visible = true;
                 }
             }
-            if (result == true) {
-                Console.WriteLine("true");
-            }
-
             if (passwordTextBox.Text != retryPasswordTextBox.Text) {
-                MessageBox.Show("Пароли не совпадают", "Ошибка регистрации", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                passWarn.Visible = true;
             } else {
                 string finalPasswordVar = passwordTextBox.Text;
             }
@@ -256,9 +252,15 @@ namespace WorldSkills
             }
         }
 
+        private void emailTextBox_Click(object sender, EventArgs e)
+        {
+            warn.Visible = false;
+        }
+
         private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            emailTextBox.Text = Regex.Replace(emailTextBox.Text, @"[^a-zA-Z]", "");
         }
+
     }
 }
