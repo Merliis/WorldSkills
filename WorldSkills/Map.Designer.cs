@@ -31,23 +31,30 @@
             this.backToMainMenu = new System.Windows.Forms.Button();
             this.Header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PointName = new System.Windows.Forms.Label();
-            this.pictureBoxStart = new System.Windows.Forms.PictureBox();
-            this.pictureBoxToilet = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMedical = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInformation = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEnegryBars = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDrinks = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.PointName = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerBlock = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToilet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedical)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnegryBars)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrinks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +67,7 @@
             this.backToMainMenu.TabIndex = 3;
             this.backToMainMenu.Text = "Назад";
             this.backToMainMenu.UseVisualStyleBackColor = true;
+            this.backToMainMenu.Click += new System.EventHandler(this.backToMainMenu_Click);
             // 
             // Header
             // 
@@ -80,107 +88,200 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.PointName);
-            this.panel1.Controls.Add(this.pictureBoxStart);
-            this.panel1.Controls.Add(this.pictureBoxToilet);
-            this.panel1.Controls.Add(this.pictureBoxMedical);
-            this.panel1.Controls.Add(this.pictureBoxInformation);
-            this.panel1.Controls.Add(this.pictureBoxEnegryBars);
-            this.panel1.Controls.Add(this.pictureBoxDrinks);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.PointName);
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-1, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(790, 612);
             this.panel1.TabIndex = 7;
             // 
-            // PointName
+            // button8
             // 
-            this.PointName.AutoSize = true;
-            this.PointName.Location = new System.Drawing.Point(601, 80);
-            this.PointName.Name = "PointName";
-            this.PointName.Size = new System.Drawing.Size(29, 13);
-            this.PointName.TabIndex = 14;
-            this.PointName.Text = "label";
-            this.PointName.Visible = false;
-            this.PointName.Click += new System.EventHandler(this.PointName_Click);
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.Location = new System.Drawing.Point(60, 151);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "Выбрать";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // pictureBoxStart
+            // button7
             // 
-            this.pictureBoxStart.Image = global::WorldSkills.Properties.Resources.map_icon_start;
-            this.pictureBoxStart.Location = new System.Drawing.Point(643, 325);
-            this.pictureBoxStart.Name = "pictureBoxStart";
-            this.pictureBoxStart.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxStart.TabIndex = 13;
-            this.pictureBoxStart.TabStop = false;
-            this.pictureBoxStart.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.Location = new System.Drawing.Point(34, 286);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "Выбрать";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // pictureBoxToilet
+            // button6
             // 
-            this.pictureBoxToilet.Image = global::WorldSkills.Properties.Resources.map_icon_toilets;
-            this.pictureBoxToilet.Location = new System.Drawing.Point(643, 230);
-            this.pictureBoxToilet.Name = "pictureBoxToilet";
-            this.pictureBoxToilet.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxToilet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxToilet.TabIndex = 12;
-            this.pictureBoxToilet.TabStop = false;
-            this.pictureBoxToilet.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Location = new System.Drawing.Point(60, 441);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 20;
+            this.button6.Text = "Выбрать";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // pictureBoxMedical
+            // button5
             // 
-            this.pictureBoxMedical.Image = global::WorldSkills.Properties.Resources.map_icon_medical;
-            this.pictureBoxMedical.Location = new System.Drawing.Point(643, 132);
-            this.pictureBoxMedical.Name = "pictureBoxMedical";
-            this.pictureBoxMedical.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxMedical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMedical.TabIndex = 11;
-            this.pictureBoxMedical.TabStop = false;
-            this.pictureBoxMedical.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(213, 413);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 19;
+            this.button5.Text = "Выбрать";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBoxInformation
+            // button4
             // 
-            this.pictureBoxInformation.Image = global::WorldSkills.Properties.Resources.map_icon_information;
-            this.pictureBoxInformation.Location = new System.Drawing.Point(506, 317);
-            this.pictureBoxInformation.Name = "pictureBoxInformation";
-            this.pictureBoxInformation.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxInformation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxInformation.TabIndex = 10;
-            this.pictureBoxInformation.TabStop = false;
-            this.pictureBoxInformation.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Location = new System.Drawing.Point(336, 390);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Выбрать";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pictureBoxEnegryBars
+            // button3
             // 
-            this.pictureBoxEnegryBars.Image = global::WorldSkills.Properties.Resources.map_icon_energy_bars;
-            this.pictureBoxEnegryBars.Location = new System.Drawing.Point(506, 222);
-            this.pictureBoxEnegryBars.Name = "pictureBoxEnegryBars";
-            this.pictureBoxEnegryBars.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxEnegryBars.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxEnegryBars.TabIndex = 9;
-            this.pictureBoxEnegryBars.TabStop = false;
-            this.pictureBoxEnegryBars.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(276, 317);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Выбрать";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBoxDrinks
+            // button2
             // 
-            this.pictureBoxDrinks.Image = global::WorldSkills.Properties.Resources.map_icon_drinks;
-            this.pictureBoxDrinks.Location = new System.Drawing.Point(506, 132);
-            this.pictureBoxDrinks.Name = "pictureBoxDrinks";
-            this.pictureBoxDrinks.Size = new System.Drawing.Size(79, 70);
-            this.pictureBoxDrinks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDrinks.TabIndex = 8;
-            this.pictureBoxDrinks.TabStop = false;
-            this.pictureBoxDrinks.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(360, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Выбрать";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(256, 45);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(308, 43);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 48);
-            this.button1.TabIndex = 7;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Выбрать";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // PointName
+            // 
+            this.PointName.AutoSize = true;
+            this.PointName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PointName.Location = new System.Drawing.Point(478, 76);
+            this.PointName.MaximumSize = new System.Drawing.Size(270, 30);
+            this.PointName.MinimumSize = new System.Drawing.Size(270, 30);
+            this.PointName.Name = "PointName";
+            this.PointName.Size = new System.Drawing.Size(270, 30);
+            this.PointName.TabIndex = 14;
+            this.PointName.Text = "Выберите точку";
+            this.PointName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PointName.Click += new System.EventHandler(this.PointName_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::WorldSkills.Properties.Resources.map_icon_start;
+            this.pictureBox7.Location = new System.Drawing.Point(643, 325);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WorldSkills.Properties.Resources.map_icon_toilets;
+            this.pictureBox6.Location = new System.Drawing.Point(643, 230);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WorldSkills.Properties.Resources.map_icon_medical;
+            this.pictureBox5.Location = new System.Drawing.Point(643, 132);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WorldSkills.Properties.Resources.map_icon_information;
+            this.pictureBox4.Location = new System.Drawing.Point(506, 317);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WorldSkills.Properties.Resources.map_icon_energy_bars;
+            this.pictureBox3.Location = new System.Drawing.Point(506, 222);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WorldSkills.Properties.Resources.map_icon_drinks;
+            this.pictureBox2.Location = new System.Drawing.Point(506, 132);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -191,6 +292,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // headerBlock
             // 
@@ -212,15 +314,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "Map";
             this.Text = "WorldSkills Marathon ● Interacive Map";
-            this.Load += new System.EventHandler(this.Map_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Map_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToilet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedical)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnegryBars)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDrinks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).EndInit();
             this.ResumeLayout(false);
@@ -235,13 +337,20 @@
         private System.Windows.Forms.PictureBox headerBlock;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBoxDrinks;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBoxToilet;
-        private System.Windows.Forms.PictureBox pictureBoxMedical;
-        private System.Windows.Forms.PictureBox pictureBoxInformation;
-        private System.Windows.Forms.PictureBox pictureBoxEnegryBars;
-        private System.Windows.Forms.PictureBox pictureBoxStart;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label PointName;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
