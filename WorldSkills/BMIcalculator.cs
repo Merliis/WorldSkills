@@ -252,5 +252,10 @@ namespace WorldSkills
         {
             Application.Exit();
         }
+
+        private void height_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

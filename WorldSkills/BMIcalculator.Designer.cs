@@ -58,8 +58,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BMIresult = new System.Windows.Forms.Label();
             this.arrowBox = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.arrow = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.female = new System.Windows.Forms.Button();
@@ -278,6 +278,7 @@
             this.height.Size = new System.Drawing.Size(46, 26);
             this.height.TabIndex = 1;
             this.height.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.height.TextChanged += new System.EventHandler(this.height_TextChanged);
             this.height.KeyDown += new System.Windows.Forms.KeyEventHandler(this.height_KeyDown);
             this.height.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.height_KeyPress);
             // 
@@ -400,14 +401,6 @@
             this.arrowBox.Size = new System.Drawing.Size(54, 87);
             this.arrowBox.TabIndex = 51;
             // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.BackColor = System.Drawing.Color.White;
-            this.toolTip1.InitialDelay = 500;
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ReshowDelay = 100;
-            // 
             // arrow
             // 
             this.arrow.Image = ((System.Drawing.Image)(resources.GetObject("arrow.Image")));
@@ -416,6 +409,14 @@
             this.arrow.Size = new System.Drawing.Size(26, 26);
             this.arrow.TabIndex = 49;
             this.arrow.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.BackColor = System.Drawing.Color.White;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // pictureBox2
             // 

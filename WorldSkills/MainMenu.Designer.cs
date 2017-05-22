@@ -60,6 +60,7 @@
             this.aboutMarathonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BMIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bMRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remainTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerBlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
@@ -333,10 +334,12 @@
             this.regRunnerToolStripMenuItem,
             this.aboutMarathonToolStripMenuItem,
             this.BMIToolStripMenuItem,
-            this.registrationToolStripMenuItem,});
+            this.registrationToolStripMenuItem,
+            this.bMRToolStripMenuItem});
             this.формыToolStripMenuItem.Name = "формыToolStripMenuItem";
             this.формыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.формыToolStripMenuItem.Text = "Формы";
+            this.формыToolStripMenuItem.Click += new System.EventHandler(this.формыToolStripMenuItem_Click);
             // 
             // runnerMenuToolStripMenuItem
             // 
@@ -401,6 +404,13 @@
             this.registrationToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.registrationToolStripMenuItem.Text = "Registration";
             this.registrationToolStripMenuItem.Click += new System.EventHandler(this.registrationToolStripMenuItem_Click);
+            // 
+            // bMRToolStripMenuItem
+            // 
+            this.bMRToolStripMenuItem.Name = "bMRToolStripMenuItem";
+            this.bMRToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.bMRToolStripMenuItem.Text = "BMR";
+            this.bMRToolStripMenuItem.Click += new System.EventHandler(this.bMRToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -470,6 +480,7 @@
         private System.Windows.Forms.ToolStripMenuItem BMIToolStripMenuItem;
         private System.Windows.Forms.Label linkToVK;
         private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bMRToolStripMenuItem;
     }
 }
 
