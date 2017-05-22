@@ -214,5 +214,17 @@ namespace WorldSkills
         {
             Application.Exit();
         }
+
+        private void формыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bMRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BMRcalculator pg24 = new BMRcalculator();
+            pg24.Show();
+            this.Hide();
+        }
     }
 }

@@ -93,6 +93,12 @@
     <Compile Include="BMIcalculator.Designer.cs">
       <DependentUpon>BMIcalculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="BMRcalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMRcalculator.Designer.cs">
+      <DependentUpon>BMRcalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="coordinatorMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BMIcalculator.resx">
       <DependentUpon>BMIcalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMRcalculator.resx">
+      <DependentUpon>BMRcalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="coordinatorMenu.resx">
       <DependentUpon>coordinatorMenu.cs</DependentUpon>
