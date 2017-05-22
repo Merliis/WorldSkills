@@ -214,5 +214,12 @@ namespace WorldSkills
         {
             Application.Exit();
         }
+
+        private void mapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Map pg10 = new Map();
+                pg10.Show();
+            this.Hide();
+        }
     }
 }

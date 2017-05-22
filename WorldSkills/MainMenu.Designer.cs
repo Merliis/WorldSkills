@@ -60,6 +60,7 @@
             this.aboutMarathonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BMIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remainTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerBlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
@@ -86,13 +87,13 @@
             // 
             this.HeaderDescription.AutoSize = true;
             this.HeaderDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.HeaderDescription.Font = new System.Drawing.Font("Arial Unicode MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HeaderDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HeaderDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.HeaderDescription.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.HeaderDescription.Location = new System.Drawing.Point(260, 85);
             this.HeaderDescription.Name = "HeaderDescription";
             this.HeaderDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HeaderDescription.Size = new System.Drawing.Size(266, 66);
+            this.HeaderDescription.Size = new System.Drawing.Size(270, 58);
             this.HeaderDescription.TabIndex = 2;
             this.HeaderDescription.Text = "Москва, Россия\r\nсреда 21 октября 2016";
             this.HeaderDescription.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -333,7 +334,8 @@
             this.regRunnerToolStripMenuItem,
             this.aboutMarathonToolStripMenuItem,
             this.BMIToolStripMenuItem,
-            this.registrationToolStripMenuItem,});
+            this.registrationToolStripMenuItem,
+            this.mapToolStripMenuItem});
             this.формыToolStripMenuItem.Name = "формыToolStripMenuItem";
             this.формыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.формыToolStripMenuItem.Text = "Формы";
@@ -401,6 +403,13 @@
             this.registrationToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.registrationToolStripMenuItem.Text = "Registration";
             this.registrationToolStripMenuItem.Click += new System.EventHandler(this.registrationToolStripMenuItem_Click);
+            // 
+            // mapToolStripMenuItem
+            // 
+            this.mapToolStripMenuItem.Name = "mapToolStripMenuItem";
+            this.mapToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.mapToolStripMenuItem.Text = "Map";
+            this.mapToolStripMenuItem.Click += new System.EventHandler(this.mapToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -470,6 +479,7 @@
         private System.Windows.Forms.ToolStripMenuItem BMIToolStripMenuItem;
         private System.Windows.Forms.Label linkToVK;
         private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mapToolStripMenuItem;
     }
 }
 
