@@ -59,7 +59,7 @@
             // 
             // headerBlock
             // 
-            this.headerBlock.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.headerBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.headerBlock.Location = new System.Drawing.Point(0, 0);
             this.headerBlock.Name = "headerBlock";
             this.headerBlock.Size = new System.Drawing.Size(784, 46);
@@ -69,7 +69,7 @@
             // Header
             // 
             this.Header.AutoSize = true;
-            this.Header.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Header.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Header.ForeColor = System.Drawing.Color.White;
             this.Header.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -85,7 +85,7 @@
             // 
             // remainTime
             // 
-            this.remainTime.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.remainTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.remainTime.Controls.Add(this.hoursCount);
             this.remainTime.Controls.Add(this.remainText);
             this.remainTime.Controls.Add(this.and);
@@ -102,7 +102,7 @@
             // hoursCount
             // 
             this.hoursCount.AutoSize = true;
-            this.hoursCount.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.hoursCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.hoursCount.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.hoursCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.hoursCount.ForeColor = System.Drawing.Color.White;
@@ -127,7 +127,7 @@
             // and
             // 
             this.and.AutoSize = true;
-            this.and.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.and.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.and.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.and.ForeColor = System.Drawing.Color.White;
             this.and.Location = new System.Drawing.Point(180, 5);
@@ -139,7 +139,7 @@
             // minutesCount
             // 
             this.minutesCount.AutoSize = true;
-            this.minutesCount.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.minutesCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.minutesCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minutesCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.minutesCount.ForeColor = System.Drawing.Color.White;
@@ -167,7 +167,7 @@
             // minutes
             // 
             this.minutes.AutoSize = true;
-            this.minutes.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.minutes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.minutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minutes.ForeColor = System.Drawing.Color.White;
             this.minutes.Location = new System.Drawing.Point(221, 5);
@@ -179,7 +179,7 @@
             // hours
             // 
             this.hours.AutoSize = true;
-            this.hours.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.hours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.hours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.hours.ForeColor = System.Drawing.Color.White;
             this.hours.Location = new System.Drawing.Point(132, 5);
@@ -191,7 +191,7 @@
             // days
             // 
             this.days.AutoSize = true;
-            this.days.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.days.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.days.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.days.ForeColor = System.Drawing.Color.White;
             this.days.Location = new System.Drawing.Point(68, 5);
@@ -202,7 +202,7 @@
             // 
             // footerBlock
             // 
-            this.footerBlock.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.footerBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.footerBlock.Location = new System.Drawing.Point(0, 624);
             this.footerBlock.Name = "footerBlock";
             this.footerBlock.Size = new System.Drawing.Size(786, 39);
@@ -229,7 +229,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(80, 80, 80);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label1.Location = new System.Drawing.Point(267, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 26);
@@ -253,6 +253,7 @@
             this.BMRcalc.TabIndex = 29;
             this.BMRcalc.Text = "BMR калькулятор";
             this.BMRcalc.UseVisualStyleBackColor = true;
+            this.BMRcalc.Click += new System.EventHandler(this.BMRcalc_Click);
             // 
             // sponsorshipOrgList
             // 

@@ -151,5 +151,12 @@ namespace WorldSkills
         {
             Application.Exit();
         }
+
+        private void BMRcalc_Click(object sender, EventArgs e)
+        {
+            BMRcalculator pg1 = new BMRcalculator();
+            pg1.Show();
+            this.Hide();
+        }
     }
 }

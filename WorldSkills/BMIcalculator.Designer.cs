@@ -246,6 +246,7 @@
             this.label1.Size = new System.Drawing.Size(362, 36);
             this.label1.TabIndex = 32;
             this.label1.Text = "Информация о том, что такое BMI калькулятор и\r\nкак калькулятор работает";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

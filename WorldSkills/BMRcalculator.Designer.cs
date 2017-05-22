@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMRcalculator));
             this.backToMainMenu = new System.Windows.Forms.Button();
             this.Header = new System.Windows.Forms.Label();
@@ -71,6 +72,8 @@
             this.Average = new System.Windows.Forms.Label();
             this.Tall = new System.Windows.Forms.Label();
             this.VeryTall = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.remainTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).BeginInit();
             this.remainTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerBlock)).BeginInit();
@@ -84,6 +87,7 @@
             this.backToMainMenu.TabIndex = 29;
             this.backToMainMenu.Text = "Назад";
             this.backToMainMenu.UseVisualStyleBackColor = true;
+            this.backToMainMenu.Click += new System.EventHandler(this.backToMainMenu_Click);
             // 
             // Header
             // 
@@ -139,6 +143,7 @@
             this.hoursCount.TabIndex = 16;
             this.hoursCount.Text = "00";
             this.hoursCount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.hoursCount.Click += new System.EventHandler(this.hoursCount_Click);
             // 
             // remainText
             // 
@@ -150,6 +155,7 @@
             this.remainText.Size = new System.Drawing.Size(196, 20);
             this.remainText.TabIndex = 20;
             this.remainText.Text = " осталось до марафона!";
+            this.remainText.Click += new System.EventHandler(this.remainText_Click);
             // 
             // and
             // 
@@ -162,6 +168,7 @@
             this.and.Size = new System.Drawing.Size(18, 20);
             this.and.TabIndex = 19;
             this.and.Text = "и";
+            this.and.Click += new System.EventHandler(this.and_Click);
             // 
             // minutesCount
             // 
@@ -176,6 +183,7 @@
             this.minutesCount.TabIndex = 17;
             this.minutesCount.Text = "00";
             this.minutesCount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.minutesCount.Click += new System.EventHandler(this.minutesCount_Click);
             // 
             // daysCount
             // 
@@ -190,6 +198,7 @@
             this.daysCount.TabIndex = 15;
             this.daysCount.Text = "000";
             this.daysCount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.daysCount.Click += new System.EventHandler(this.daysCount_Click);
             // 
             // minutes
             // 
@@ -202,6 +211,7 @@
             this.minutes.Size = new System.Drawing.Size(65, 20);
             this.minutes.TabIndex = 14;
             this.minutes.Text = "минуты";
+            this.minutes.Click += new System.EventHandler(this.minutes_Click);
             // 
             // hours
             // 
@@ -214,6 +224,7 @@
             this.hours.Size = new System.Drawing.Size(53, 20);
             this.hours.TabIndex = 13;
             this.hours.Text = "часов";
+            this.hours.Click += new System.EventHandler(this.hours_Click);
             // 
             // days
             // 
@@ -226,6 +237,7 @@
             this.days.Size = new System.Drawing.Size(47, 20);
             this.days.TabIndex = 12;
             this.days.Text = "дней";
+            this.days.Click += new System.EventHandler(this.days_Click);
             // 
             // footerBlock
             // 
@@ -244,6 +256,7 @@
             this.cancel.TabIndex = 44;
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // calc
             // 
@@ -287,6 +300,7 @@
             this.weight.TabIndex = 42;
             this.weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.weight.TextChanged += new System.EventHandler(this.weight_TextChanged);
+            this.weight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.weight_KeyPress);
             // 
             // height
             // 
@@ -298,6 +312,7 @@
             this.height.TabIndex = 41;
             this.height.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.height.TextChanged += new System.EventHandler(this.height_TextChanged);
+            this.height.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.height_KeyPress);
             // 
             // label3
             // 
@@ -378,6 +393,7 @@
             this.textBox1.TabIndex = 51;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label6
             // 
@@ -401,6 +417,7 @@
             this.label7.Size = new System.Drawing.Size(342, 36);
             this.label7.TabIndex = 55;
             this.label7.Text = "Информация о том, что такое BMR\r\nкалькулятор и как расчитываются результаты";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // runnerMenuText
             // 
@@ -416,8 +433,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Help;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline);
+            this.label8.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label8.Location = new System.Drawing.Point(458, 127);
             this.label8.Name = "label8";
@@ -452,11 +469,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 25F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(531, 222);
+            this.label11.Location = new System.Drawing.Point(526, 222);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 39);
+            this.label11.Size = new System.Drawing.Size(0, 39);
             this.label11.TabIndex = 59;
-            this.label11.Text = "1.670";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
@@ -521,9 +537,8 @@
             this.Minimum.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Minimum.Location = new System.Drawing.Point(651, 346);
             this.Minimum.Name = "Minimum";
-            this.Minimum.Size = new System.Drawing.Size(71, 27);
+            this.Minimum.Size = new System.Drawing.Size(0, 27);
             this.Minimum.TabIndex = 65;
-            this.Minimum.Text = "2.000";
             this.Minimum.Click += new System.EventHandler(this.Minimum_Click);
             // 
             // Low
@@ -533,9 +548,8 @@
             this.Low.ForeColor = System.Drawing.Color.Lime;
             this.Low.Location = new System.Drawing.Point(651, 381);
             this.Low.Name = "Low";
-            this.Low.Size = new System.Drawing.Size(71, 27);
+            this.Low.Size = new System.Drawing.Size(0, 27);
             this.Low.TabIndex = 66;
-            this.Low.Text = "2.000";
             this.Low.Click += new System.EventHandler(this.Low_Click);
             // 
             // Average
@@ -545,9 +559,8 @@
             this.Average.ForeColor = System.Drawing.Color.Goldenrod;
             this.Average.Location = new System.Drawing.Point(651, 422);
             this.Average.Name = "Average";
-            this.Average.Size = new System.Drawing.Size(71, 27);
+            this.Average.Size = new System.Drawing.Size(0, 27);
             this.Average.TabIndex = 67;
-            this.Average.Text = "2.000";
             this.Average.Click += new System.EventHandler(this.Average_Click);
             // 
             // Tall
@@ -557,9 +570,8 @@
             this.Tall.ForeColor = System.Drawing.Color.Red;
             this.Tall.Location = new System.Drawing.Point(651, 459);
             this.Tall.Name = "Tall";
-            this.Tall.Size = new System.Drawing.Size(71, 27);
+            this.Tall.Size = new System.Drawing.Size(0, 27);
             this.Tall.TabIndex = 68;
-            this.Tall.Text = "2.000";
             this.Tall.Click += new System.EventHandler(this.Tall_Click);
             // 
             // VeryTall
@@ -569,10 +581,19 @@
             this.VeryTall.ForeColor = System.Drawing.Color.DarkRed;
             this.VeryTall.Location = new System.Drawing.Point(651, 496);
             this.VeryTall.Name = "VeryTall";
-            this.VeryTall.Size = new System.Drawing.Size(71, 27);
+            this.VeryTall.Size = new System.Drawing.Size(0, 27);
             this.VeryTall.TabIndex = 69;
-            this.VeryTall.Text = "2.000";
             this.VeryTall.Click += new System.EventHandler(this.VeryTall_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // remainTimer
+            // 
+            this.remainTimer.Enabled = true;
+            this.remainTimer.Interval = 1;
+            this.remainTimer.Tick += new System.EventHandler(this.remainTimer_Tick);
             // 
             // BMRcalculator
             // 
@@ -617,7 +638,9 @@
             this.MaximizeBox = false;
             this.Name = "BMRcalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WorldSkills Marathon ● BMI Calculator";
+            this.Text = "WorldSkills Marathon ● BMR Calculator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BMRcalculator_FormClosed);
+            this.Load += new System.EventHandler(this.BMRcalculator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.headerBlock)).EndInit();
             this.remainTime.ResumeLayout(false);
             this.remainTime.PerformLayout();
@@ -671,5 +694,7 @@
         private System.Windows.Forms.Label Average;
         private System.Windows.Forms.Label Tall;
         private System.Windows.Forms.Label VeryTall;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Timer remainTimer;
     }
 }
